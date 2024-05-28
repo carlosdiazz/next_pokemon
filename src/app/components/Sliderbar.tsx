@@ -1,20 +1,26 @@
 import Image from "next/image";
 import React from "react";
-import { IoBrowsersOutline, IoCalculator, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from "react-icons/io5";
 import { Props, SidebarMenuItem } from "./SidebarManuItem";
 
 const menuItems: Props[] = [
   {
     path: "/dasboard/main",
-    icon: <IoBrowsersOutline></IoBrowsersOutline>,
+    icon: <IoBrowsersOutline size={40}/>,
     subTitle: "Ver Dasboard",
     title: "Dasboard",
   },
   {
     path: "/dasboard/counter",
-    icon: <IoCalculator />,
+    icon: <IoCalculator size={40}/>,
     subTitle: "Ver Counter",
     title: "Counter",
+  },
+  {
+    path: "/dasboard/pokemons",
+    icon: <IoFootball size={40}/>,
+    subTitle: "Ver Pokemones",
+    title: "Pokemon",
   },
 ];
 
@@ -22,7 +28,7 @@ export const SideBar = () => {
   return (
     <div
       id="menu"
-      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen overflow-y-auto"
+      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 overflow-y-auto"
       style={{ width: "400px" }}
     >
       <div id="logo" className="my-4 px-6">
