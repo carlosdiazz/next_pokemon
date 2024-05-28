@@ -11,7 +11,6 @@ export interface Props {
 
 export const SidebarMenuItem = ({ icon, path, subTitle, title }: Props) => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <Link
       href={path}

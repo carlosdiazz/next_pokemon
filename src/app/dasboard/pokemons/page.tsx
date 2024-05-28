@@ -1,4 +1,4 @@
-import {PokemonsResponse,SimplePokemon, PokemonGrid} from '@/app/dasboard/pokemons'
+import {PokemonsResponse,SimplePokemon, PokemonGrid} from '@/pokemons'
 
 
 const getPokemons = async (limit = 20, offset = 0):Promise<SimplePokemon[]> => {

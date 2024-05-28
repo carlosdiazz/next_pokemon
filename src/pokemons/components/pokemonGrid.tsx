@@ -1,7 +1,7 @@
 
 import React from 'react'
-import { SimplePokemon } from '../interfaces/simple-pokemon';
 import { PokemonCard } from './pokemonCard';
+import { SimplePokemon } from '../interfaces/simple-pokemon';
 
 interface Props{
   pokemons: SimplePokemon[];
