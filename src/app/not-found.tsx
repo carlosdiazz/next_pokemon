@@ -22,7 +22,7 @@ export default function NotFound() {
         ></span>
 
         <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
-          <Link href="/dasboard">Go Home</Link>
+          <Link href="/dashboard">Go Home</Link>
         </span>
       </div>
     </button>

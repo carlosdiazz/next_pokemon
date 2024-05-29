@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 
 export default function DasboardPage() {
 
-  redirect('/dasboard/main')
+  redirect('/dashboard/main')
 
   //return (
   //  <>

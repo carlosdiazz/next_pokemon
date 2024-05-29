@@ -1,26 +1,32 @@
 import Image from "next/image";
 import React from "react";
-import { IoBrowsersOutline, IoCalculator, IoFootball, IoLogoReact } from "react-icons/io5";
+import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeartOutline, IoLogoReact } from "react-icons/io5";
 import { Props, SidebarMenuItem } from "./SidebarManuItem";
 
 const menuItems: Props[] = [
   {
-    path: "/dasboard/main",
+    path: "/dashboard/main",
     icon: <IoBrowsersOutline size={40}/>,
-    subTitle: "Ver Dasboard",
-    title: "Dasboard",
+    subTitle: "Ver Dashboard",
+    title: "Dashboard",
   },
   {
-    path: "/dasboard/counter",
+    path: "/dashboard/counter",
     icon: <IoCalculator size={40}/>,
     subTitle: "Ver Counter",
     title: "Counter",
   },
   {
-    path: "/dasboard/pokemons",
+    path: "/dashboard/pokemons",
     icon: <IoFootball size={40}/>,
     subTitle: "Ver Pokemones",
     title: "Pokemon",
+  },
+  {
+    path: "/dashboard/favorites",
+    icon: <IoHeartOutline size={40}/>,
+    subTitle: "Ver Favoritos",
+    title: "Favoritos",
   },
 ];
 
