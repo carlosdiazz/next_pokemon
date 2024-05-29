@@ -1,5 +1,9 @@
 import {PokemonsResponse,SimplePokemon, PokemonGrid} from '@/pokemons'
 
+export const metadata = {
+ title: '150 Pokemons',
+ description: '150 Pokemons',
+};
 
 const getPokemons = async (limit = 20, offset = 0):Promise<SimplePokemon[]> => {
   const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`).then(res => res.json())
@@ -8,7 +12,6 @@ const getPokemons = async (limit = 20, offset = 0):Promise<SimplePokemon[]> => {
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name
   }))
-  //throw new Error("QLOQ ERROR")
 
   return pokemons;
 }
