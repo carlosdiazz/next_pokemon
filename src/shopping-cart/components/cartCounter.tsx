@@ -1,24 +1,37 @@
 "use client";
 import { addOne, initCounterState, substractOne } from "@/lib/counter/counterSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 //import { useState } from "react";
 
 interface Props {
   value?: number;
 }
 
-export const CartCounter = ({ value = 20 }: Props) => {
+export interface CounterResponse {
+  count: number;
+}
+
+const getApiCounter = async ():Promise<CounterResponse> => {
+  const data: CounterResponse = await fetch('/api/counter').then(res => res.json());
+  console.log({data});
+  return data
+}
+
+export const CartCounter = ({ value = 0 }: Props) => {
   const count = useAppSelector((state) => state.counter.count);
   const dispatch = useAppDispatch();
 
+  //useEffect(() => {
+  //  getApiCounter().then(({count}) => dispatch(initCounterState(count)));
+  //}, [dispatch])
+
 
   const initialized = useRef(false)
-
   if (!initialized.current) {
-    dispatch(initCounterState(value))
+    getApiCounter().then(({count}) => dispatch(initCounterState(count)));
+    //dispatch(initCounterState(value))
     initialized.current = true
-
   }
 
   // Declarar el estado del contador con un valor inicial de 0
