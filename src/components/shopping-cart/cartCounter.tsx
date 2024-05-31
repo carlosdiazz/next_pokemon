@@ -1,8 +1,8 @@
 "use client";
 import { addOne, initCounterState, substractOne } from "@/lib/counter/counterSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store";
-import { useEffect, useRef } from "react";
-//import { useState } from "react";
+import { useRef } from "react";
+
 
 interface Props {
   value?: number;
@@ -13,7 +13,7 @@ export interface CounterResponse {
 }
 
 const getApiCounter = async ():Promise<CounterResponse> => {
-  const data: CounterResponse = await fetch('/api/counter').then(res => res.json());
+  const data: CounterResponse = await fetch('http://localhost:3000/api/counter').then(res => res.json());
   console.log({data});
   return data
 }

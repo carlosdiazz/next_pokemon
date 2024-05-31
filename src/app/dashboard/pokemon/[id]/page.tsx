@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import { Pokemon } from "@/pokemons";
+import { Pokemon } from "@/components";
 import { notFound } from "next/navigation";
 
 interface Props {
